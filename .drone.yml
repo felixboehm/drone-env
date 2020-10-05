@@ -8,9 +8,12 @@ platform:
   arch: amd64
 
 steps:
+- name: greeting
+  image: alpine
+  commands:
+  - echo hello
+  - echo world
+
 - name: print env
   image: felixboehm/drone-env
 
-trigger:
-  branch:
-  - master
