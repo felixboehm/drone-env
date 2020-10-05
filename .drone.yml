@@ -1,6 +1,7 @@
 ---
 kind: pipeline
-name: container
+type: docker
+name: default
 
 platform:
   os: linux
@@ -11,6 +12,5 @@ steps:
   image: felixboehm/drone-env
 
 trigger:
-  ref:
-  - refs/heads/master
-  - refs/pull/**
+  branch:
+  - master
